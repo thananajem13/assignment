@@ -5,5 +5,5 @@ let productRouter = Router()
 productRouter.post('/',addProduct)
 productRouter.get('/',getProduct)
 productRouter.put('/id/:id/userId/:UserId',updateProduct)
-productRouter.delete('/id/:id',deleteProduct)
+productRouter.delete('/id/:id/UserId/:UserId',deleteProduct)
 export default productRouter

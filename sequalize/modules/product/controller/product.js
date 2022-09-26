@@ -34,8 +34,8 @@ export let updateProduct = async (req, res, next) => {
 }
 export let deleteProduct = async (req, res, next) => {
     try {
-        let {id} = req.params
-        let deletedProduct = await productModel.destroy({ where: { id } })
+        let {id,UserId} = req.params
+        let deletedProduct = await productModel.destroy({ where: { id,UserId } })
         deletedProduct ? res.json({ message: "Done", deletedProduct }) : res.json({ message: "invalid product id" ,deletedProduct})
     } catch (error) {
         res.json({ message: "catch error", error })
