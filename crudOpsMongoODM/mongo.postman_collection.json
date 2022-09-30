@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "3d1d4e2a-32bb-4e42-a1f2-5de79dbb62d5",
+		"name": "mongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21953247"
+	},
+	"item": [
+		{
+			"name": "mongodb ass",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstname\": \"ahmad mahmoud\",\r\n    \"lastname\": \"test\",\r\n    \"email\": \"ahmh@gmail.com\",\r\n    \"password\": \"mohammadB23@\",\r\n    \"age\":20,\r\n    \"cpassword\":\"mohammadB23@\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/api/v1/user/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUsers",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Ahmad\",\r\n    \"lastName\": \"Ballout\",\r\n    \"eMail\": \"Alisllout234@gmail.com\",\r\n    \"password\": \"mohammadB23@\",\r\n    \"age\":28\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/api/v1/user/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserByID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Ahmad\",\r\n    \"lastName\": \"Ballout\",\r\n    \"eMail\": \"Alisllout234@gmail.com\",\r\n    \"password\": \"mohammadB23@\",\r\n    \"age\":28\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/api/v1/user/id/633624a0169658545eb940d4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"id",
+										"633624a0169658545eb940d4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "fnameOrLnameContainA",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Ahmad\",\r\n    \"lastName\": \"Ballout\",\r\n    \"eMail\": \"Alisllout234@gmail.com\",\r\n    \"password\": \"mohammadB23@\",\r\n    \"age\":28\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/api/v1/user/fnameOrLnameContainA",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"fnameOrLnameContainA"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "firstNameEndsWithAAndAgeGTE20",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7000/api/v1/user/firstNameEndsWithAAndAgeGTE20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"firstNameEndsWithAAndAgeGTE20"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "firstNameStartsWithAAndAgeLT30",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7000/api/v1/user/firstNameStartsWithAAndAgeLT30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"firstNameStartsWithAAndAgeLT30"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "firstNameContainAmi",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"str\":\"ami\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/api/v1/user/firstNameContainAmi",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"firstNameContainAmi"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "signin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"email\": \"ahmh@gmail.com\",\r\n    \"password\": \"mohammadB23@\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/api/v1/user/signin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateUserByID",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"firstName\": \"thana'update\",\r\n    \"lastName\": \"Ballout update\",\r\n    \"email\": \"thana.najemupdate@gmail.com\",\r\n    \"password\": \"thanaPass123@Update\", \r\n    \"age\": 28\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/api/v1/user/id/633624a0169658545eb940d4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"id",
+										"633624a0169658545eb940d4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateUsers",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"age\":26\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/api/v1/user/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteUser",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7000/api/v1/user/id/633636508c8993fefc9dbf56",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"id",
+										"633636508c8993fefc9dbf56"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteManyUsers",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"firstname\":\"thana\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7000/api/v1/user/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
