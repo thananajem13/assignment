@@ -58,7 +58,9 @@ export const updateUserByID = async (req, res) => {
     try {
          let { id } = req.params
     let { age, firstname, lastname, email, password } = req.body
-    const updatedUser = await userModel.findByIdAndUpdate(id, { age, firstname, lastname, email, password: await hashPass(password) }, { new: true })
+    // first solution
+    // const updatedUser = await userModel.findByIdAndUpdate(id, { age, firstname, lastname, email, password: await hashPass(password) }, { new: true })
+    const updatedUser = await userModel.findOneAndReplace(id, { age, firstname, lastname, email, password: await hashPass(password) }, { new: true })
     updatedUser ? res.json({ message: "Done", updatedUser }) : res.json({ message: "invalid id", updatedUser })
     } catch (error) {
         res.json({message:"error",error})
