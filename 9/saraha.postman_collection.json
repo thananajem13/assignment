@@ -1,0 +1,596 @@
+{
+	"info": {
+		"_postman_id": "bd02c2c9-9d6e-4ea2-a021-ce5979ada4dd",
+		"name": "saraha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21953247"
+	},
+	"item": [
+		{
+			"name": "user Copy",
+			"item": [
+				{
+					"name": "signup Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"FirstName\": \"thana\", \r\n    \"LastName\": \"ballout\", \r\n    \"Email\": \"thana.najem13@gmail.com\",\r\n    \"Password\": \"mohammadB23@\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin Copy",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n      \"Email\": \"thana.najem13@gmail.com\",\r\n    \"Password\": \"testCase\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGYwNTk0NmQ1MmI2NTI1MGZlZDc0OCIsImlzTG9nZ2VkIjp0cnVlLCJpYXQiOjE2NjYxMjY1ODl9.KszHCKakZDaGRng0Ns7daLtbeguHmZ8_N0vcgGGXHkc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/signout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"signout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGVlYTIwYTg4ZTk1ZTVmZGE4ZDQ0NyIsImlzTG9nZ2VkIjp0cnVlLCJpYXQiOjE2NjYxMTk5NTl9.zFBr7o0u75lWdKR3mnwplSY3sHLb8YFFPXcx41hZACg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FirstName\":\"test3 update\",\r\n    \"LastName\":\"najem\",\r\n    \"Email\":\"thana.najem13@gmail.com\",\r\n    \"Password\":\"12345\",\r\n    \"phone\":\"123456789\",\r\n    \"Age\":30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/updateProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"updateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProfile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGVlYTIwYTg4ZTk1ZTVmZGE4ZDQ0NyIsImlzTG9nZ2VkIjp0cnVlLCJpYXQiOjE2NjYxMTk5NTl9.zFBr7o0u75lWdKR3mnwplSY3sHLb8YFFPXcx41hZACg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/deleteProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"deleteProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGYwNTk0NmQ1MmI2NTI1MGZlZDc0OCIsImlzTG9nZ2VkIjp0cnVlLCJpYXQiOjE2NjYxMjQyODV9.Fsd6XANjzjqkPVPL9QrLbJfuw7VGqyrmWTj20uRxDlc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGYwNTk0NmQ1MmI2NTI1MGZlZDc0OCIsImlzTG9nZ2VkIjp0cnVlLCJpYXQiOjE2NjYxMjQyODV9.Fsd6XANjzjqkPVPL9QrLbJfuw7VGqyrmWTj20uRxDlc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n      \"email\": \"ahmh01@gmail.com\",\r\n    \"password\": \"mohammadB23@\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "softDelete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGYwNTk0NmQ1MmI2NTI1MGZlZDc0OCIsImlzTG9nZ2VkIjp0cnVlLCJpYXQiOjE2NjYxMjQyODV9.Fsd6XANjzjqkPVPL9QrLbJfuw7VGqyrmWTj20uRxDlc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/softDelete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"softDelete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGYwNTk0NmQ1MmI2NTI1MGZlZDc0OCIsImlzTG9nZ2VkIjp0cnVlLCJpYXQiOjE2NjYxMjc4NjEsImV4cCI6MTY2NjEyNzg5MX0.s48DRibDjCrcLqrc_FAVczLybEXt79gTeNUvKb3llWQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n        \"oldPassword\":\"mohammadB23@\" ,\r\n        \"newPassword\":\"12345\"\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lastSeenLoggedOutUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGYwNTk0NmQ1MmI2NTI1MGZlZDc0OCIsImlzTG9nZ2VkIjp0cnVlLCJpYXQiOjE2NjYxMjY1ODl9.KszHCKakZDaGRng0Ns7daLtbeguHmZ8_N0vcgGGXHkc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/lastSeenLoggedOutUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"lastSeenLoggedOutUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "share profile",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/profile/share/634f19d6caceeed3c9574e69",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"profile",
+								"share",
+								"634f19d6caceeed3c9574e69"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendCode",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"Email\":\"thana.najem13@gmail.com\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/sendCode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"sendCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgetPass",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"TzgipgeQvLkOmIw6j9nJz\",\r\n    \"newPassword\":\"testCase\",\r\n    \"Email\":\"thana.najem13@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/forgetPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"forgetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirmemail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n      \"email\": \"ahmh01@gmail.com\",\r\n    \"password\": \"mohammadB23@\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/confirmEmail/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGYyNGQ5NWQzY2IzM2JmNGQyNDRhNiIsImlhdCI6MTY2NjEzMTE2MX0.bps8p2LrqxQijJo1kMTM0JIv4olqfHJ0Cg7Q2K-JL5I",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"confirmEmail",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGYyNGQ5NWQzY2IzM2JmNGQyNDRhNiIsImlhdCI6MTY2NjEzMTE2MX0.bps8p2LrqxQijJo1kMTM0JIv4olqfHJ0Cg7Q2K-JL5I"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "messages",
+			"item": [
+				{
+					"name": "softDeletedMsg",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGYxOWQ2Y2FjZWVlZDNjOTU3NGU2OSIsImlzTG9nZ2VkIjp0cnVlLCJpYXQiOjE2NjYxMjkzMDZ9.hWusoMTJAOQPLSjc4AORGT0LzSMmuuq3msw3DBOf33s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/message/634f1dd699885de0641d46b1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"message",
+								"634f1dd699885de0641d46b1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user message",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGYxOWQ2Y2FjZWVlZDNjOTU3NGU2OSIsImlzTG9nZ2VkIjp0cnVlLCJpYXQiOjE2NjYxMjkzMDZ9.hWusoMTJAOQPLSjc4AORGT0LzSMmuuq3msw3DBOf33s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send msg",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n      \"message\": \"two mesasge\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/message/634f1dd699885de0641d46b1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"message",
+								"634f1dd699885de0641d46b1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
