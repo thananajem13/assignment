@@ -21,6 +21,8 @@ router.post('/posts/pic' ,
 
 
 router.post('/addComment/:postId/:commentReplyTo?',auth(['user','admin']),validation(postAndCommentValidators.createComment),commentController.createComment)
+// TODO: add validator
+router.get('/getComments/:postId',auth(['user','admin']),commentController.getPostComments)
 
 router.patch("/comment/:commentID",auth(['admin','user']),validation(postAndCommentValidators.editComment),commentController.editComment)
 router.patch("/softDelComment/:commentID",auth(['admin','user']),validation(postAndCommentValidators.softDelComment),commentController.softDeleteComment)
