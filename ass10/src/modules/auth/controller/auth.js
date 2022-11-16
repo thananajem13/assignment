@@ -11,7 +11,7 @@ export const signUp = async (req, res) => {
     if (user) {
         return res.status(400).json({ message: "email exist" })
     } else {
-        userModel.updateOne({_id}, {})
+        // userModel.updateOne({_id}, {})
         // const hashPassword = bcrypt.hashSync(password, parseInt(process.env.SALTROUND))
         // const UserJSONToStr = JSONToSTR({ name, email, password: hashPassword })
         // const { qrStr } = await generateQR(UserJSONToStr)
